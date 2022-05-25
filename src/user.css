@@ -1,0 +1,292 @@
+#user{
+    color: white;
+    background-color: lightslategray;
+    width: 14px;
+    height: 14px;
+    padding: 9px;
+    border-radius: 50%;
+    position: absolute;
+    top: 17px;
+    left: 385px;
+    
+}
+
+#cardarea{
+    width: 100%;
+    height: 230px;
+    background-color: #444545;
+}
+
+
+.nav-link{
+    font-family: 'Poppins', sans-serif;
+    color: #848482;
+    font-size: 15px;
+    text-decoration: none;
+    margin-top: 6px;
+    margin-left: 8px;
+    font-weight: 400;
+   
+}
+#line{
+    width: 1px;
+    height: 25px;
+    background-color: lightgray;
+    margin: 13px 10px 0 15px;
+    
+}
+#phone{
+    color: black;
+    width: 19px;
+    height: 19px;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 16px;
+    left: 445px;
+    
+
+}
+#para{
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    position: absolute;
+    left: 490px;
+    top: 14px;
+    font-weight: 400;
+    color: #425b79;
+    
+}
+.link1{
+    text-decoration: none;
+    color: #969d90;
+}
+
+#fapic{
+    border: none;
+    
+}
+#cardtitle{
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+#cardtext{
+    color: white;
+    text-align: center;
+}
+
+#footer{
+
+    background-color: #2c2d2e;
+    width: 100%;
+    height: 280px;
+}
+.payment{
+    color: #ededee;
+    font-size: 15px;
+    margin: 25px 210px 0 60px;
+    font-family: 'Poppins', sans-serif;
+}
+.payment1{
+    color: #ededee;
+    font-size: 15px;
+    margin: 25px 0 0 160px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+#easypaisa{
+    width: 50px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+  
+  
+}
+
+#main{
+    margin: 20px 0 0 50px;
+    display: flex;
+
+}
+#main1{
+    width: 100%;
+    height: 380px;
+    background-image:url('./images/lineup.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+   
+  
+}
+
+
+
+#main2{
+    width: 100%;
+    height: 380px;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+#main4{
+    width: 100%;
+    height: 610px;
+    background-image:url('./images/hurancan.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+   
+  
+}
+
+
+
+#main5{
+    width: 100%;
+    height: 610px;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+#head7{
+    color: #ededee;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 45px;
+}
+
+#para7{
+    color: #ededee;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: 3%;
+    margin: 0px 50px 0px 50px;
+    font-size: 15px;
+    justify-content: center;
+}
+#para8{
+    color: #ededee;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: 1%;
+    margin: 0px 50px 0px 50px;
+    font-size: 17px;
+    justify-content: center;
+
+}
+.iconsshade{
+    height: 23px;
+    color: lightgray;
+    position: absolute;
+    top: 0px;
+    left: 1032px;
+    top: -50px;
+}
+
+#icon1{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 1100px;
+    bottom: 20px;
+    background-color: #3b5998;
+}
+
+
+
+#icon3{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 1170px;
+    bottom: 20px;
+}
+#icons{
+    position: relative;
+}
+
+.icons5{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 1090px;
+    bottom: 17px;
+    cursor: pointer;
+    z-index: 1;
+    
+}
+.icons6{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 1130px;
+    bottom: 17px;
+    cursor: pointer;
+    z-index: 2;
+    
+}
+.icons7{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 1170px;
+    bottom: 17px;
+    cursor: pointer;
+    z-index: 3;
+    
+}
+
+#border{
+
+    border-top: 2px solid white;
+
+}
+#list{
+    list-style-type: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.listname{
+    margin-left: 20px;
+}
+#ptag{
+    color: #596269;
+    margin-left: 510px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.end{
+    position: absolute;
+    
+    justify-content: center;
+}
+
+
