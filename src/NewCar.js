@@ -1,104 +1,115 @@
 import React, { Component } from 'react';
 import Header from './header';
 import './page1.css';
-import { getNewcar1, getNewcar2 , getNewcar3 } from './newcar1';
 import UsedcarCard from './UsedcarCard';
 import Cards2 from './cards2';
 import Footer from './footer';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { getNewCar1 } from './Service/api';
 
-class NewCars extends Component {
-    state = { 
 
-        New1: getNewcar1(),
-        New2: getNewcar2(),
-        New3: getNewcar3(),
+const NewCars = () => {
 
-     } 
-    render() { 
-        return (
-            <div>
-                <Header/>
-                <div className='row'>
+    const [NewcarData1, setNewCarData]= useState([]);
+
+useEffect(()=>{
+    getNewCarData();
+
+},[]);
+
+const getNewCarData= async()=>{
+    const result= await getNewCar1();
+    setNewCarData(result.data);
+   
+}
+    return ( 
+        <div className='row'>
+            <div className='col-md-12'>
+            <Header/>
+            <div className='row'>
                     <div className='col-md-12'>
 
-                    <h1 id='pg1head2'>New Cars</h1>
-                    <h1 id='pg1head3'>Cars with Creative Technology.</h1>
+                     <h1 id='pg1head2'>New Cars</h1>
+                     <h1 id='pg1head3'>Cars with Creative Technology.</h1>
 
-                    </div>
+                     </div>
 
 
+                 </div>
 
-                </div>
+                 <div className='row'>
+                    <div className='col-12' id='data'>
 
-        <div id='data'>
+                          
+                             { 
+                                
+                            NewcarData1.slice(0,4).map(content => <UsedcarCard content={content} image={content.image} title={content.title} text={content.text}
+                              price={content.price} Engine={content.Engine} Model={content.Model}
+                                
+                                   />
+                                )
+                                
               
-            
-              { 
-                  
+                               
+                                
+                            } 
+                            </div>
+                        </div> 
+
+                <div className='row'>
+                    <div className='col-12' id='data'>
+
+                          
+                             { 
+                                
+                            NewcarData1.slice(4,8).map(content => <UsedcarCard content={content} image={content.image} title={content.title} text={content.text}
+                              price={content.price} Engine={content.Engine} Model={content.Model} 
+                                
+                                   />
+                                )
+                                
               
+                               
+                                
+                            } 
+                            </div>
+                        </div> 
 
 
-              this.state.New2.map(content => <UsedcarCard image={content.image} title={content.title} text={content.text}
-                price={content.price} Engine={content.Engine} Model={content.Model}
-                  
-                     />
-                  )
-                  
+                    <div className='row'>
+                    <div className='col-12' id='data'>
 
-                 
-                  
-              }    
-          </div>
-
-
-          <div id='data'>
+                          
+                             { 
+                                
+                            NewcarData1.slice(8,13).map(content => <UsedcarCard content={content} image={content.image} title={content.title} text={content.text}
+                              price={content.price} Engine={content.Engine} Model={content.Model} 
+                                
+                                   />
+                                )
+                                
               
-            
-              { 
-                  
-              
+                               
+                                
+                            } 
+                            </div>
+                        </div> 
 
+                        <Cards2/>
+                        <Footer/> 
 
-              this.state.New3.map(content => <UsedcarCard image={content.image} title={content.title} text={content.text}
-                price={content.price} Engine={content.Engine} Model={content.Model}
-                  
-                     />
-                  )
-                  
-
-                 
-                  
-              }    
-          </div>
-
-          <div id='data'>
-              
-            
-              { 
-                  
-              
-
-
-              this.state.New1.map(content => <UsedcarCard image={content.image} title={content.title} text={content.text}
-                price={content.price} Engine={content.Engine} Model={content.Model} 
-                  
-                     />
-                  )
-                  
-
-                 
-                  
-              }    
-          </div>
-
-        <Cards2/>
-        <Footer/> 
-
-
-
-            </div>
-        );
-    }
+                        </div> 
+                        </div> 
+                        
+             
+     );
 }
  
 export default NewCars;
+
+
+
+
+
+

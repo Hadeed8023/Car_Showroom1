@@ -24,9 +24,14 @@ function Page2Layout() {
 
 
         </div>
+        <div>
+
         <Cards2/>
         <Footer/> 
         
+
+        </div>
+      
             
           
 

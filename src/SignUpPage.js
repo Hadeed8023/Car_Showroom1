@@ -3,6 +3,8 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import { TextField } from './TextField';
 import * as Yup from 'yup';
+import { addApplicant } from './Service/api';
+import { Link } from 'react-router-dom';
 
 
 export const SignUpPage = () => {
@@ -33,8 +35,10 @@ export const SignUpPage = () => {
         confirmPassword: ''
       }}
       validationSchema={validate}
-      onSubmit={values => {
-        console.log(values)
+     
+      onSubmit={ values => {
+        console.log(values);
+        addApplicant(values);
       }}
     >
       {formik => (
@@ -56,7 +60,8 @@ export const SignUpPage = () => {
               <label style={{margin:"30px"}} for="Other">Other</label>
             
             </div>
-            <button className="btn btn-outline-danger" type="submit" id="btn8" style={{marginBottom:"15px"}}>Register</button>
+           <button className="btn btn-outline-danger" type="submit" id="btn8" style={{marginBottom:"15px"}}>Register</button>
+           
           
           </Form>
         </div>

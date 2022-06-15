@@ -9,6 +9,9 @@ import Huracan from './huracan';
 import { Routes, Route } from "react-router-dom";
 import UsedCars from './UsedCar';
 import NewCars from './NewCar';
+import ShowUsers from './user';
+import { Update } from './update';
+import Booking from './Booking';
 
 
 function App() {
@@ -33,6 +36,12 @@ function App() {
  <Route path="/UsedCars" element={<UsedCars/>} />
 
  <Route path="/NewCars" element={<NewCars/>} />
+
+ <Route path="/ShowUser" element={<ShowUsers/>} />
+
+ <Route path="/Update" element={<Update/>} />
+
+ <Route path="/Booking" element={<Booking/>} />
   
  
 

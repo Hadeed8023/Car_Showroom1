@@ -4,9 +4,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfinity } from '@fortawesome/free-solid-svg-icons'
 import bootstrap from '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import { Link } from "react-router-dom";
+import { Formik, Form } from 'formik';
+import { TextField } from './TextField';
+import {useState} from 'react';
+import { login } from './Service/api';
 
 function Header() {
+    const [applicantData,setApplicantData] = useState({
+      email: '',
+      password: ''
+    });
+    const handleChange = (e) => {
+      setApplicantData({...applicantData,[e.target.name]:[e.target.value]})
+    }
+
+    const adddetails= async (e)=>{
+      e.preventDefault();
+      console.log(applicantData)
+     await login(applicantData)
+
+      //addApplicant(applicantData)
+    }
     return ( 
+
         <nav class="navbar navbar-dark fixed-top" style={{backgroundColor:"black"}} >
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><FontAwesomeIcon icon={faInfinity} className="infinity"></FontAwesomeIcon></a>
@@ -33,11 +53,12 @@ function Header() {
                   <a class="nav-link" href="#"><Link to="/NewCars" className='link1'>New Cars</Link></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#main2">About Us</a>
+                  <a class="nav-link" href="#main2"><Link to="/Booking" className='link1'>Booked Cars</Link></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#footer">Contact Us</a>
+                  <a class="nav-link" href="#main2"><Link to="/ShowUser" className='link1'>ShowUsers</Link></a>
                 </li>
+               
                 <li class="nav-item">
                 <a class="btn btn-outline-danger" data-bs-toggle="collapse" href="#collapseExample" style={{width:"50%",marginLeft:"28%"}} role="button" aria-expanded="false" aria-controls="collapseExample">
                 Sign-In
@@ -45,9 +66,9 @@ function Header() {
                 <div class="collapse" id="collapseExample" style={{marginTop:"10px"}}>
                   <form>
                 
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Enter Email Address'></input>
-                <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Enter Password' style={{marginTop:"8px"}}></input>
-                <button type="submit" class="btn btn-outline-danger" style={{marginTop:"10px",width:"40%",marginLeft:"8%",display:"inline-block"}}>Submit</button>
+                <input type="email" name='email' onChange={(e)=>handleChange(e)} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Enter Email Address'></input>
+                <input type="password" onChange={(e)=>handleChange(e)} name='password' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Enter Password' style={{marginTop:"8px"}}></input>
+                <button onClick={(e)=> adddetails(e)} class="btn btn-outline-danger" style={{marginTop:"10px",width:"40%",marginLeft:"8%",display:"inline-block"}}>Submit</button>
                 
                 <Link to="/SignIn" id='link1'>   <button type="submit" class="btn btn-outline-danger" style={{marginTop:"10px",width:"40%",marginLeft:"5%",display:"inline-block"}}>Sign-Up </button></Link> 
                 

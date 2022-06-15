@@ -141,7 +141,7 @@
 
 #main4{
     width: 100%;
-    height: 610px;
+    height: 620px;
     background-image:url('./images/hurancan.jfif');
     background-size: cover;
     background-position: center;
@@ -154,11 +154,42 @@
   
 }
 
+#register{
+    margin-top: 100px;
+    margin-left: 34%;
+    width: 450px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+#update{
+
+    margin-top: 65px;
+    margin-left: 40%;
+    width: 450px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+
+}
+
+#main77{
+    width: 100%;
+    height: 620px;
+    background-image:url('./images/hurancan.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+}
+
 
 
 #main5{
     width: 100%;
-    height: 610px;
+    height: 620px;
     z-index: 2;
     position: absolute;
     top: 0;

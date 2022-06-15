@@ -282,7 +282,8 @@ position: relative;
 }
 #data{
     display: flex;
-    flex-direction: row;
+
+
 }
 #card1:hover{
     transform: scale(1.1);
@@ -304,6 +305,11 @@ position: relative;
     position: absolute;
     font-weight: bold;
 
+}
+
+#register{
+    width: 15%;
+   
 }
 
 #pg1head2{
